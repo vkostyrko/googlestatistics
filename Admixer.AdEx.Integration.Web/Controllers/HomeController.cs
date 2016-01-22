@@ -28,6 +28,7 @@ namespace Admixer.AdEx.Integration.Web.Controllers
             IntegrationAPI api = new IntegrationAPI(config);
             var googledata=api.FetchAdexchangeData(LastDateUpdated.ToString("yyyy-MM-dd"), DateTime.Now.ToString("yyyy-MM-dd"));
             api.UpdateData(googledata);
+            //Hardcoded, dont have UI right now
             //Will get from UI:    DateRange, TagID
             DateRange range = new DateRange();
             range.DateFrom = DateTime.Parse("2016-01-01");
